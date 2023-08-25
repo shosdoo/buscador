@@ -24,13 +24,14 @@ while True:
     print(f"[{Fore.RED}2{Fore.RESET}] {Fore.RED}Abrir Tryhackme{Fore.RESET}")
     print(f"[{Fore.GREEN}3{Fore.RESET}] {Fore.GREEN}Abrir Hackthebox{Fore.RESET}")
     print(f"[{Fore.WHITE}4{Fore.RESET}] {Fore.WHITE}Abrir ChatGpt{Fore.RESET}")
-    print(f"[{Fore.MAGENTA}5{Fore.RESET}] {Fore.MAGENTA}Abrir URL Personalizada{Fore.MAGENTA}\n")
+    print(f"[{Fore.MAGENTA}5{Fore.RESET}] {Fore.MAGENTA}Abrir busqueda Personalizada{Fore.MAGENTA}\n")
     
     opcion = input("selecciona una opcion: ")
     
     
     if opcion == yt:
-        webbrowser.open('https://www.youtube.com/')
+        url_youtube = input("ingresa lo que deseas buscar: ")
+        webbrowser.open(f'https://www.youtube.com/results?search_query={url_youtube}')
         print("Abriendo Youtube")
         break
     elif opcion ==  thm:
@@ -46,9 +47,10 @@ while True:
         print("Abriendo ChatGpt")
         break
     elif opcion == Personalizada:
-        url_Personalizada = input("Ingresa una url: ")
-        if url_Personalizada.startswith('https://'):
-            webbrowser.open(url_Personalizada)
+        url_Personalizada = input("Ingresa lo que deseas buscar: ")
+        webbrowser.open(f"https://www.google.com/search?q={url_Personalizada}")
+        print(f"Buscando {url_Personalizada} en google ")
+        break
     else:
         print("Opcion no valida")
         
