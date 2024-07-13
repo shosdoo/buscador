@@ -1,6 +1,6 @@
 import webbrowser
 from colorama import init, Fore
-
+#ola
 init(autoreset=True)
 
 GREEN = "\033[92m"
